@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Flags</base>
+  <class>FlagSet</class>
+  <name>civicrm_flag_set</name>
+  <comment>Do not leave fixme comments in place.</comment>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique FlagSet ID</comment>
+    <html>
+      <type>Number</type>
+    </html>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+
+  <field>
+    <name>name</name>
+    <title>Name</title>
+    <type>varchar</type>
+    <length>32</length>
+    <import>true</import>
+    <comment>Name of the flagset</comment>
+    <html>
+      <type>Text</type>
+      <label>Flagset</label>
+    </html>
+  </field>
+
+  <index>
+    <name>UI_name</name>
+    <fieldName>name</fieldName>
+    <unique>true</unique>
+  </index>
+
+</table>
