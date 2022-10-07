@@ -36,6 +36,8 @@ SET FOREIGN_KEY_CHECKS=1;
 CREATE TABLE `civicrm_flag_set` (
   `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'Unique FlagSet ID',
   `name` varchar(32) COMMENT 'Name of the flagset',
+  `label` varchar(255) DEFAULT NULL COMMENT 'Administrative label for search',
+  `is_multiple` tinyint NOT NULL DEFAULT 0 COMMENT 'Does this set hold multiple values?',
   PRIMARY KEY (`id`),
   UNIQUE INDEX `UI_name`(name)
 )
